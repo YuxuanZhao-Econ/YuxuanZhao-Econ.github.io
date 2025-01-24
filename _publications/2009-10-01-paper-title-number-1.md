@@ -3,11 +3,10 @@ title: "Failures of Expectation Management: Learning from Counter-Cyclical Signa
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'This paper investigates the signaling effect of policy'
 date: 2025-01-24
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+I establish a DSGE model with incomplete information and endogenous policy signals. The core mechanism is a stimulus policy-pessimism feedback loop: stimulus policy signals trigger rational pessimism by informing people that the government views the economy as being in recession and in need of stimulus. Feedback like that will weaken the effectiveness of stimulus policy and exacerbates the recession.
