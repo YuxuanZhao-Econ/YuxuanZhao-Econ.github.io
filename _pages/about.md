@@ -16,6 +16,9 @@ Updating Peiceived Policy Rule by Policy Action
 The figure below, adapted from Bauer et al. (2024), illustrates the difference between the perceived monetary policy rule and the historical monetary policy rule. Specifically, this difference became larger after central banks implemented quantitative easing strategy in 2008. 
 <br/><img src='/images/policy-rule.png'>
 
-My current work is tring to develop a micro-founded model to investigate how perceived policy rules affect the macroeconomy through signaling channels. The core mechanism is: 
+My current work is tring to develop a micro-founded model to investigate how perceived policy rules affect the macroeconomy through signaling channels. 
 
-When the central bank announces a stimulus policy which exceeds people's expectation, it operates through two channels: 1. the direct policy effect stimulating economic activity; 2. after observing the policy action and current economic condition, people update their perception about the policy rule. This learning process amplifies the coefficient in the perceived rule, thereby creating an amplified stimulus effect. 
+The core mechanism is: When the central bank announces a stimulus policy which exceeds people's expectation, it operates through two channels: 
+
+1. the direct policy effect stimulating economic activity;
+2. after observing the policy action and current economic condition, people update their perception about the policy rule. This learning process amplifies the coefficient in the perceived rule, thereby creating an amplified stimulus effect. 
