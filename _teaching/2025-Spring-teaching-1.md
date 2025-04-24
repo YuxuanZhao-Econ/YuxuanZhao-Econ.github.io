@@ -1,3 +1,13 @@
+---
+title: "Teaching Assitant 1"
+collection: teaching
+type: "Principles of Economics (Macro)"
+permalink: /teaching/2025-Spring-teaching-1
+venue: "Peking University, Economics Department"
+date: 2025-01-01
+location: "Beijing, China"
+---
+
 
 Principles of Economics (Macro) 
 ======
