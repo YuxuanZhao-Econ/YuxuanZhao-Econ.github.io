@@ -11,5 +11,6 @@ location: "Beijing, China"
 
 Principles of Economics (Macro) 
 ======
-This course introduces the basic principles of macroeconomics and some simple economic models, including the Solow Model, IS-LM Model
-Your can find this course's [syllabus](/files/0.syllabus_2025.pdf) (chinese version) here
+This course introduces the basic principles of macroeconomics and some simple economic models, including the Solow Model, IS-LM Model.
+
+Your can find this course's [syllabus](/files/0.syllabus_2025.pdf) (Chinese Version) here
