@@ -1,15 +1,25 @@
 ---
 permalink: /
-title: "About me"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+## About Me
 
-I am currently an undergraduate student at Peking University, applying for PhD programs in Economics. My [Curriculum Vitae](/files/CV_YuxuanZhao.pdf) is here.
+I am a Ph.D student in Economics at University of Minnesota, Twin Cities.  
 
 Broadly speaking, my research focuses on the role of imperfect information in macroeconomic business cycles. I am also interested in heterogeneous agent models. My current work explores topics such as the signaling effects of policy news and house price dynamics.
+
+My [Curriculum Vitae](/files/CV_YuxuanZhao.pdf) is here.
+
+## Education
+
+Ph.D in Economics, Department of Economics, University of Minnesota,    2024-
+
+B.A in Economics,  Guanghua School of Management,  Peking University,    2024
+
 
 
 Updating Peiceived Policy Rule by Policy Action 
