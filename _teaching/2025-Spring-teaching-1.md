@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2025-Spring-teaching-1
 venue: "Peking University, Economics Department"
-date: 2025-Spring
+date: 2025-01-01
 location: "Beijing, China"
 ---
 
