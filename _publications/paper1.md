@@ -1,7 +1,8 @@
 ---
 title: "Failures of Expectation Management: Learning from Counter-Cyclical Signalling Policy"
-collection: workingpaper
-permalink: /publications/paper1
+collection: publications
+category: workingpaper
+permalink: /publication/paper1
 excerpt: 'This paper investigates the signaling effect of policy'
 date: 2025-01-24
 slidesurl: 'http://YuxuanZhao-Econ.github.io/files/slides1.pdf'
