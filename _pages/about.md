@@ -21,4 +21,4 @@ Ph.D in Economics, Department of Economics, University of Minnesota,  2025 - Pre
 
 B.A in Economics,  Yuanpei College & School of Economics,  Peking University,  2021 - 2025
 
-Email : [yuxuanzhao.econ@gmail.com](mailto:yuxuanzhao.econ@gmail.com) or [zhao2229@mun.edu](mailto:zhao2229@mun.edu)
+Email : [yuxuanzhao.econ@gmail.com](mailto:yuxuanzhao.econ@gmail.com) or [zhao2229@umn.edu](mailto:zhao2229@umn.edu)
