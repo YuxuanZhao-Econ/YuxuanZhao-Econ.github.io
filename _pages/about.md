@@ -8,7 +8,7 @@ redirect_from:
 ---
 ## About Me
 
-I am a Ph.D student in Economics at University of Minnesota, Twin Cities.  
+I am an incoming Ph.D student in Economics at University of Minnesota, Twin Cities.  
 
 Broadly speaking, my research focuses on the role of imperfect information in macroeconomic business cycles. I am also interested in heterogeneous agent models. My current work explores topics such as the signaling effects of policy news and house price dynamics.
 
