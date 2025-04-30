@@ -12,7 +12,7 @@ I am an incoming Ph.D student in Economics at University of Minnesota, Twin Citi
 
 Broadly speaking, my research focuses on the role of imperfect information in macroeconomic business cycles. I am also interested in heterogeneous agent models. My current work explores topics such as the signaling effects of policy news and house price dynamics.
 
-Your can find my [CV](/files/CV_YuxuanZhao.pdf) (2025.04 Version) here.
+You can find my [CV](/files/CV_YuxuanZhao.pdf) (2025.04 Version) here.
 
 
 ## Education
