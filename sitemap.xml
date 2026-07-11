@@ -5,4 +5,10 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/</loc></url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/deep-learning-macro/intro-to-deep-learning/</loc></url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/deep-learning-macro/rbc-model/</loc></url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/sequence-space-jacobian/krusell-smith/</loc></url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/sequence-space-jacobian/rbc-model/</loc></url>
+  <url><loc>https://www.yuxuan-zhao.com/notebooks/ks1998/solver/</loc></url>
 </urlset>

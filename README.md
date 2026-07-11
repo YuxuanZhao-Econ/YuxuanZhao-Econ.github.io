@@ -16,4 +16,13 @@ Then visit `http://localhost:4173`.
 
 The site is plain HTML, CSS, and JavaScript. It can be deployed to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any static host without a build command.
 
-The `CNAME` file is included for GitHub Pages. Point the custom domain only after the new host is ready, so the existing Google Site remains live during the transition.
+The `CNAME` file connects the GitHub Pages deployment to the custom domain.
+
+## Refresh notebook pages
+
+The notebook library contains static reading copies of selected public notebooks. The render step downloads the current files from their source repositories but does not execute any code:
+
+```powershell
+python -m pip install -r requirements-notebooks.txt
+python scripts/render_notebooks.py
+```
