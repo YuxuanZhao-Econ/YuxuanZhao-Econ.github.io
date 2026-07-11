@@ -217,14 +217,16 @@ a { color: inherit; text-decoration: none; }
 .notebook-content .jp-OutputPrompt,
 .notebook-content .prompt { display: none; }
 
-.code-disclosure {
+.code-disclosure,
+.output-disclosure {
   margin-bottom: 0;
   border: 1px solid var(--line);
   border-radius: 3px;
   background: var(--code);
 }
 
-.code-disclosure summary {
+.code-disclosure summary,
+.output-disclosure summary {
   display: flex;
   justify-content: space-between;
   padding: 11px 14px;
@@ -235,11 +237,27 @@ a { color: inherit; text-decoration: none; }
   list-style: none;
 }
 
-.code-disclosure summary::-webkit-details-marker { display: none; }
-.code-disclosure summary span:last-child { color: var(--muted); font-weight: 400; }
-.code-disclosure[open] summary { border-bottom: 1px solid var(--line); }
+.code-disclosure summary::-webkit-details-marker,
+.output-disclosure summary::-webkit-details-marker { display: none; }
+.code-disclosure summary span:last-child,
+.output-disclosure summary span:last-child { color: var(--muted); font-weight: 400; }
+.code-disclosure[open] summary,
+.output-disclosure[open] summary { border-bottom: 1px solid var(--line); }
 .code-disclosure .jp-InputArea,
 .code-disclosure .input_area { border: 0; }
+
+.output-disclosure {
+  margin-top: 12px;
+  background: var(--paper);
+}
+
+.output-disclosure .jp-OutputArea-output,
+.output-disclosure .output_subarea {
+  max-height: 520px;
+  margin: 0;
+  padding: 16px 18px;
+  overflow: auto;
+}
 
 .notebook-footer {
   height: 76px;
