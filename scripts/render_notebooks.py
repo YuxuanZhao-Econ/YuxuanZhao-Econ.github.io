@@ -69,7 +69,7 @@ NOTEBOOKS = (
         source_path="notebooks/KS1998_Solver.ipynb",
         output_path="notebooks/ks1998/solver/index.html",
         title="Krusell–Smith (1998) Solver",
-        description="A reproducible Julia implementation of the Krusell–Smith heterogeneous-agent model.",
+        description="A Julia implementation of the traditional Krusell–Smith (1998) solution algorithm.",
     ),
 )
 
