@@ -3,15 +3,15 @@
 from __future__ import annotations
 
 import html
+import hashlib
+import json
 import sys
 import urllib.request
-import warnings
 from dataclasses import dataclass
 from pathlib import Path
 
 import nbformat
 from nbconvert import HTMLExporter
-from nbformat.validator import normalize
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,11 +81,21 @@ def download_notebook(page: NotebookPage):
     )
     with urllib.request.urlopen(request, timeout=90) as response:
         raw = response.read().decode("utf-8")
-    with warnings.catch_warnings():
-        warnings.filterwarnings("ignore", message="Cell is missing an id field")
-        notebook = nbformat.reads(raw, as_version=4)
-    _, notebook = normalize(notebook)
-    return notebook
+
+    # Older notebooks may not contain cell IDs. Assign stable IDs before
+    # nbformat validation so unchanged notebooks render identically every run.
+    payload = json.loads(raw)
+    for index, cell in enumerate(payload.get("cells", [])):
+        if cell.get("id"):
+            continue
+        source = cell.get("source", "")
+        if isinstance(source, list):
+            source = "".join(source)
+        fingerprint = f"{index}\0{cell.get('cell_type', '')}\0{source}"
+        digest = hashlib.sha1(fingerprint.encode("utf-8")).hexdigest()[:12]
+        cell["id"] = f"cell-{digest}"
+
+    return nbformat.reads(json.dumps(payload, ensure_ascii=False), as_version=4)
 
 
 def remove_duplicate_title(notebook) -> None:
