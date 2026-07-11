@@ -51,6 +51,13 @@ NOTEBOOKS = (
         description="An Euler-equation deep-learning method applied to a stochastic RBC benchmark.",
     ),
     NotebookPage(
+        repository="DeepLearningMacro",
+        source_path="notebooks/KS1998.ipynb",
+        output_path="notebooks/deep-learning-macro/krusell-smith/index.html",
+        title="Deep Learning for the Krusell–Smith Model",
+        description="A deep-learning Euler-equation method for the Krusell–Smith heterogeneous-agent model.",
+    ),
+    NotebookPage(
         repository="sequence_space_jacobian",
         source_path="notebooks/KS1998.ipynb",
         output_path="notebooks/sequence-space-jacobian/krusell-smith/index.html",
