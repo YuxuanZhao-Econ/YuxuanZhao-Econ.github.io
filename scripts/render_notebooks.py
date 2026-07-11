@@ -52,14 +52,14 @@ NOTEBOOKS = (
     ),
     NotebookPage(
         repository="sequence_space_jacobian",
-        source_path="KS1998.ipynb",
+        source_path="notebooks/KS1998.ipynb",
         output_path="notebooks/sequence-space-jacobian/krusell-smith/index.html",
         title="Krusell–Smith with Sequence-Space Jacobians",
         description="A heterogeneous-agent transition exercise using sequence-space Jacobians and the fake news algorithm.",
     ),
     NotebookPage(
         repository="sequence_space_jacobian",
-        source_path="RBC.ipynb",
+        source_path="notebooks/RBC.ipynb",
         output_path="notebooks/sequence-space-jacobian/rbc-model/index.html",
         title="RBC Model with Sequence-Space Jacobians",
         description="A compact introduction to solving an RBC model with sequence-space Jacobians in Julia.",

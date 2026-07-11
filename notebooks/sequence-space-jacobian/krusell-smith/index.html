@@ -106,7 +106,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       <nav class="notebook-utility" aria-label="Notebook links">
         <a href="/">← Back to website</a>
         <span aria-hidden="true">·</span>
-        <a href="https://github.com/YuxuanZhao-Econ/sequence_space_jacobian/blob/main/KS1998.ipynb" target="_blank" rel="noreferrer">View source ↗</a>
+        <a href="https://github.com/YuxuanZhao-Econ/sequence_space_jacobian/blob/main/notebooks/KS1998.ipynb" target="_blank" rel="noreferrer">View source ↗</a>
       </nav>
 
       <header class="notebook-title-block">
@@ -242,10 +242,27 @@ $$</p>
 <div class="input">
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">LinearAlgebra</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Pkg</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">find_project_root</span><span class="p">(</span><span class="n">start_dir</span><span class="o">=</span><span class="n">pwd</span><span class="p">())</span>
+<span class="w">    </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abspath</span><span class="p">(</span><span class="n">start_dir</span><span class="p">)</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">isfile</span><span class="p">(</span><span class="n">joinpath</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span><span class="w"> </span><span class="s">"Project.toml"</span><span class="p">))</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">dir</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dirname</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span>
+<span class="w">        </span><span class="n">parent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">error</span><span class="p">(</span><span class="s">"Could not find Project.toml from </span><span class="si">$</span><span class="p">(</span><span class="n">start_dir</span><span class="p">)</span><span class="s">"</span><span class="p">)</span>
+<span class="w">        </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">project_root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find_project_root</span><span class="p">()</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">project_root</span><span class="p">)</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">LinearAlgebra</span>
 <span class="k">using</span><span class="w"> </span><span class="n">Plots</span>
 
-<span class="n">include</span><span class="p">(</span><span class="s">"SSJ_Function.jl"</span><span class="p">)</span>
+<span class="n">include</span><span class="p">(</span><span class="n">joinpath</span><span class="p">(</span><span class="n">project_root</span><span class="p">,</span><span class="w"> </span><span class="s">"src"</span><span class="p">,</span><span class="w"> </span><span class="s">"SSJ_Function.jl"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
