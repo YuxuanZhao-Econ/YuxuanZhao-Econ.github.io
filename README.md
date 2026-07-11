@@ -26,3 +26,5 @@ The notebook library contains static reading copies of selected public notebooks
 python -m pip install -r requirements-notebooks.txt
 python scripts/render_notebooks.py
 ```
+
+The `Refresh notebooks and deploy Pages` GitHub Actions workflow runs this process daily, on website pushes, and on manual dispatch. Scheduled runs deploy only when a rendered notebook page has changed.
