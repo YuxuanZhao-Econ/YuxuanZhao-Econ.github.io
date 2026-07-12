@@ -571,7 +571,17 @@ $$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=1f3400d1"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="6)-Simulation-and-Stochastic-Training">6) Simulation and Stochastic Training<a class="anchor-link" href="#6)-Simulation-and-Stochastic-Training"></a></h2><p>Let $n=1,2,3,\ldots$ index neural-network training iterations. The parameter vector before iteration $n$ is $\theta^{(n)}$. Within a mini-batch, $i=1,\ldots,B$ indexes current states and $j\in\{1,2\}$ indexes the two independent future-shock branches. Initialize $m^{(0)}=v^{(0)}=0$.</p>
+<h2 id="6)-Simulation-and-Stochastic-Training">6) Simulation and Stochastic Training<a class="anchor-link" href="#6)-Simulation-and-Stochastic-Training"></a></h2><p>The key training principle is that the Euler equation is a <strong>state-by-state conditional restriction</strong>. For every economically relevant current state $(k,z)$, the policy represented by the network should satisfy</p>
+<p>$$
+\mathbb E_{\epsilon}\!\left[q_{\theta}(k,z,\epsilon)\mid k,z\right]=0.
+$$</p>
+<p>Consequently, the training observations do not have to be consecutive points from one simulated time path. We can instead draw $(k,z)$ directly from a training distribution $\mathcal D$ over the relevant state space. Each draw is a <strong>training point</strong> (or stochastic collocation point) at which we ask the conditional Euler equation to hold. The population objective is</p>
+<p>$$
+\mathcal L(\theta)
+=\mathbb E_{(k,z)\sim\mathcal D}\!\left[\left(\mathbb E_{\epsilon}\!\left[q_{\theta}(k,z,\epsilon)\mid k,z\right]\right)^2\right].
+$$</p>
+<p>This is why the RBC training loop samples current capital and productivity from the state space rather than advancing a single economy from period to period. The two independent future-shock branches introduced below are then used to estimate the squared conditional expectation at each sampled training point.</p>
+<p>Let $n=1,2,3,\ldots$ index neural-network training iterations. The parameter vector before iteration $n$ is $\theta^{(n)}$. Within a mini-batch, $i=1,\ldots,B$ indexes current states and $j\in\{1,2\}$ indexes the two independent future-shock branches. Initialize $m^{(0)}=v^{(0)}=0$.</p>
 <h3 id="6.1-Draw-the-current-state-mini-batch">6.1 Draw the current-state mini-batch<a class="anchor-link" href="#6.1-Draw-the-current-state-mini-batch"></a></h3><p>At iteration $n$, draw $B$ current states</p>
 <p>$$
 \{(k_i,z_i)\}_{i=1}^B.
