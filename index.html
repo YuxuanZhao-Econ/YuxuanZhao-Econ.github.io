@@ -47,7 +47,21 @@
         </button>
 
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
-          <a href="#github">GitHub</a>
+          <div class="nav-dropdown" data-nav-dropdown>
+            <button
+              class="nav-dropdown-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="github-navigation-menu"
+              data-dropdown-toggle
+            >
+              GitHub
+            </button>
+            <div class="nav-dropdown-menu" id="github-navigation-menu" data-dropdown-menu>
+              <a href="#github">Repositories</a>
+              <a href="/notebooks/">Notebooks</a>
+            </div>
+          </div>
           <a href="https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
           <a href="#research">Research</a>
           <a href="#teaching">Teaching</a>
