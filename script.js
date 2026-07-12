@@ -1,11 +1,7 @@
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
-const dropdown = document.querySelector('[data-nav-dropdown]');
-const dropdownToggle = document.querySelector('[data-dropdown-toggle]');
-const dropdownMenu = document.querySelector('[data-dropdown-menu]');
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
-const menuLinks = [...document.querySelectorAll('.site-nav a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reveals = document.querySelectorAll('.reveal');
 const year = document.querySelector('[data-year]');
@@ -16,13 +12,7 @@ const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
 
-const closeDropdown = () => {
-  dropdownMenu.classList.remove('open');
-  dropdownToggle.setAttribute('aria-expanded', 'false');
-};
-
 const closeMenu = () => {
-  closeDropdown();
   nav.classList.remove('open');
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.setAttribute('aria-label', 'Open navigation');
@@ -37,23 +27,10 @@ menuToggle.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', !isOpen);
 });
 
-dropdownToggle.addEventListener('click', () => {
-  const isOpen = dropdownToggle.getAttribute('aria-expanded') === 'true';
-  dropdownMenu.classList.toggle('open', !isOpen);
-  dropdownToggle.setAttribute('aria-expanded', String(!isOpen));
-});
-
-document.addEventListener('click', (event) => {
-  if (!dropdown.contains(event.target)) closeDropdown();
-});
-
-menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
 window.addEventListener('keydown', (event) => {
-  if (event.key !== 'Escape') return;
-  const dropdownWasOpen = dropdownToggle.getAttribute('aria-expanded') === 'true';
-  closeMenu();
-  if (dropdownWasOpen) dropdownToggle.focus();
+  if (event.key === 'Escape') closeMenu();
 });
 
 const revealObserver = new IntersectionObserver(
@@ -79,7 +56,6 @@ const sectionObserver = new IntersectionObserver(
     navLinks.forEach((link) => {
       link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`);
     });
-    dropdownToggle.classList.toggle('active', visible.target.id === 'github');
   },
   { threshold: [0.2, 0.45, 0.7], rootMargin: '-15% 0px -55%' }
 );
