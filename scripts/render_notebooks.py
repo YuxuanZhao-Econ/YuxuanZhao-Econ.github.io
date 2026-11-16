@@ -26,9 +26,12 @@ class NotebookPage:
     title: str
     description: str
     local_source_path: str | None = None
+    source_link: str | None = None
 
     @property
     def source_url(self) -> str:
+        if self.source_link:
+            return self.source_link
         return f"https://github.com/{OWNER}/{self.repository}/blob/main/{self.source_path}"
 
     @property
@@ -58,6 +61,24 @@ NOTEBOOKS = (
         title="Deep Learning for the Krusell–Smith Model",
         description="A deep-learning Euler-equation method for the Krusell–Smith heterogeneous-agent model.",
         local_source_path="notebooks/deep-learning-macro/krusell-smith/KS1998.ipynb",
+    ),
+    NotebookPage(
+        repository="DeepLearningMacro",
+        source_path="notebooks/Intro_NLP_Part1_Sentiment.ipynb",
+        output_path="notebooks/deep-learning-macro/text-classification/index.html",
+        title="Text Classification",
+        description="An introduction to NLP through IMDb sentiment analysis: tokenization, word embeddings, training, and evaluation.",
+        local_source_path="notebooks/deep-learning-macro/text-classification/Intro_NLP_Part1_Sentiment.ipynb",
+        source_link="/notebooks/deep-learning-macro/text-classification/Intro_NLP_Part1_Sentiment.ipynb",
+    ),
+    NotebookPage(
+        repository="DeepLearningMacro",
+        source_path="notebooks/Intro_NLP_Part2_Sequence_Models.ipynb",
+        output_path="notebooks/deep-learning-macro/neural-architectures/index.html",
+        title="Neural Architectures for NLP",
+        description="RNNs, LSTMs, Transformers, and BERT fine-tuning for text classification, with model comparisons and saved results.",
+        local_source_path="notebooks/deep-learning-macro/neural-architectures/Intro_NLP_Part2_Sequence_Models.ipynb",
+        source_link="/notebooks/deep-learning-macro/neural-architectures/Intro_NLP_Part2_Sequence_Models.ipynb",
     ),
     NotebookPage(
         repository="sequence_space_jacobian",
