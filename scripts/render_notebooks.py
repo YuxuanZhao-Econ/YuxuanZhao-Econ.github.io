@@ -16,6 +16,15 @@ from nbconvert import HTMLExporter
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = "YuxuanZhao-Econ"
+CV_URL = "https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing"
+
+# Homepage subsection each repository's notebooks are listed under.
+CATEGORIES = {
+    "DeepLearningMacro": "Deep learning for macroeconomics",
+    "sequence_space_jacobian": "Sequence-space Jacobians",
+    "KS1998": "Krusell–Smith method",
+    "HANK": "Krusell–Smith method",
+}
 
 
 @dataclass(frozen=True)
@@ -45,29 +54,29 @@ NOTEBOOKS = (
         source_path="notebooks/Intro_DL.ipynb",
         output_path="notebooks/deep-learning-macro/intro-to-deep-learning/index.html",
         title="Intro to Deep Learning",
-        description="Neural-network foundations and automatic differentiation for computational macroeconomics.",
+        description="Neural-network foundations and applications to macroeconomic models.",
     ),
     NotebookPage(
         repository="DeepLearningMacro",
         source_path="notebooks/RBC.ipynb",
         output_path="notebooks/deep-learning-macro/rbc-model/index.html",
         title="Deep Learning for an RBC Model",
-        description="An Euler-equation deep-learning method applied to a stochastic RBC benchmark.",
+        description="An RBC model with the Euler-equation deep-learning method of Maliar et al. (2021).",
     ),
     NotebookPage(
         repository="DeepLearningMacro",
         source_path="notebooks/KS1998.ipynb",
         output_path="notebooks/deep-learning-macro/krusell-smith/index.html",
         title="Deep Learning for the Krusell–Smith Model",
-        description="A deep-learning Euler-equation method for the Krusell–Smith heterogeneous-agent model.",
+        description="The Krusell–Smith (1998) model with the deep-learning method of Maliar et al. (2021).",
         local_source_path="notebooks/deep-learning-macro/krusell-smith/KS1998.ipynb",
     ),
     NotebookPage(
         repository="DeepLearningMacro",
         source_path="notebooks/Intro_NLP_Part1_Sentiment.ipynb",
         output_path="notebooks/deep-learning-macro/text-classification/index.html",
-        title="Text Classification",
-        description="An introduction to NLP through IMDb sentiment analysis: tokenization, word embeddings, training, and evaluation.",
+        title="Intro to NLP",
+        description="Learning the basics of NLP through sentiment classification of IMDb movie reviews.",
         local_source_path="notebooks/deep-learning-macro/text-classification/Intro_NLP_Part1_Sentiment.ipynb",
         source_link="/notebooks/deep-learning-macro/text-classification/Intro_NLP_Part1_Sentiment.ipynb",
     ),
@@ -76,7 +85,7 @@ NOTEBOOKS = (
         source_path="notebooks/Intro_NLP_Part2_Sequence_Models.ipynb",
         output_path="notebooks/deep-learning-macro/neural-architectures/index.html",
         title="Neural Architectures for NLP",
-        description="RNNs, LSTMs, Transformers, and BERT fine-tuning for text classification, with model comparisons and saved results.",
+        description="RNN, LSTM, Transformer, and fine-tuning a pretrained BERT model.",
         local_source_path="notebooks/deep-learning-macro/neural-architectures/Intro_NLP_Part2_Sequence_Models.ipynb",
         source_link="/notebooks/deep-learning-macro/neural-architectures/Intro_NLP_Part2_Sequence_Models.ipynb",
     ),
@@ -85,21 +94,21 @@ NOTEBOOKS = (
         source_path="notebooks/KS1998.ipynb",
         output_path="notebooks/sequence-space-jacobian/krusell-smith/index.html",
         title="Krusell–Smith Model with Sequence-Space Jacobians",
-        description="A heterogeneous-agent transition exercise using sequence-space Jacobians and the fake news algorithm.",
+        description="The Krusell–Smith (1998) model, with news shocks and the fake news algorithm.",
     ),
     NotebookPage(
         repository="sequence_space_jacobian",
         source_path="notebooks/RBC.ipynb",
         output_path="notebooks/sequence-space-jacobian/rbc-model/index.html",
         title="RBC Model with Sequence-Space Jacobians",
-        description="A compact introduction to solving an RBC model with sequence-space Jacobians in Julia.",
+        description="An introductory sequence-space Jacobian solver for the RBC model, built from scratch.",
     ),
     NotebookPage(
         repository="sequence_space_jacobian",
         source_path="notebooks/HANK.ipynb",
         output_path="notebooks/sequence-space-jacobian/hank/index.html",
         title="HANK Model with Sequence-Space Jacobians",
-        description="A one-asset HANK model solved with sequence-space Jacobians, transition blocks, and the fake news algorithm.",
+        description="A one-asset HANK model with TFP and monetary-policy shocks.",
         local_source_path="notebooks/sequence-space-jacobian/hank/HANK.ipynb",
     ),
     NotebookPage(
@@ -107,7 +116,7 @@ NOTEBOOKS = (
         source_path="notebooks/KMV_HANK.ipynb",
         output_path="notebooks/sequence-space-jacobian/kmv-hank/index.html",
         title="Two-Asset HANK Model with Sequence-Space Jacobians",
-        description="A two-asset KMV-style HANK model with liquid and illiquid assets, capital, equity, and sequence-space Jacobians.",
+        description="The two-asset HANK model of Kaplan, Moll, and Violante (2018).",
         local_source_path="notebooks/sequence-space-jacobian/kmv-hank/KMV_HANK.ipynb",
     ),
     NotebookPage(
@@ -115,21 +124,21 @@ NOTEBOOKS = (
         source_path="notebooks/HANK.ipynb",
         output_path="notebooks/hank/index.html",
         title="Solving a HANK Model",
-        description="A global solution of a one-asset heterogeneous-agent New Keynesian model with aggregate TFP and monetary-policy shocks.",
+        description="A one-asset HANK model with aggregate TFP and monetary-policy shocks.",
     ),
     NotebookPage(
         repository="HANK",
         source_path="notebooks/RANK.ipynb",
         output_path="notebooks/rank/index.html",
         title="Solving a RANK Model",
-        description="A representative-agent New Keynesian model solved with a global fixed-point algorithm.",
+        description="A representative-agent New Keynesian (RANK) model.",
     ),
     NotebookPage(
         repository="KS1998",
         source_path="notebooks/KS1998_Solver.ipynb",
         output_path="notebooks/ks1998/solver/index.html",
         title="Krusell–Smith (1998) Solver",
-        description="A Julia implementation of the traditional Krusell–Smith (1998) solution algorithm.",
+        description="The Krusell–Smith (1998) model with value function iteration.",
     ),
 )
 
@@ -183,26 +192,27 @@ def notebook_body(notebook) -> tuple[str, str]:
     return body, inline_css
 
 
-def render_page(page: NotebookPage, body: str, inline_css: str, kernel: str) -> str:
+def render_page(page: NotebookPage, body: str, inline_css: str, language: str) -> str:
     title = html.escape(page.title)
     description = html.escape(page.description)
-    repository = html.escape(page.repository)
+    description_attr = html.escape(page.description, quote=True)
+    category = html.escape(CATEGORIES.get(page.repository, page.repository))
     source_url = html.escape(page.source_url, quote=True)
     canonical = f"https://www.yuxuan-zhao.com/{page.output_path.removesuffix('index.html')}"
-    kernel_label = html.escape(kernel or "Julia")
+    language_label = html.escape(language or "Julia")
 
     return f"""<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{description}" />
-    <meta name="theme-color" content="#f7f5ef" />
+    <meta name="description" content="{description_attr}" />
+    <meta name="theme-color" content="#fdfcf8" />
     <link rel="canonical" href="{canonical}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <style>{inline_css}</style>
     <link rel="stylesheet" href="/notebooks/notebook.css" />
     <script>
@@ -214,25 +224,21 @@ def render_page(page: NotebookPage, body: str, inline_css: str, kernel: str) -> 
   </head>
   <body class="notebook-page">
     <a class="skip-link" href="#notebook-content">Skip to notebook</a>
-    <header class="notebook-header">
-      <div class="notebook-header-inner">
-        <a class="wordmark" href="/">Yuxuan <span>/</span> Economics</a>
-        <a class="library-link" href="/notebooks/">Notebook library</a>
-      </div>
-    </header>
+    <nav class="topnav" aria-label="Site">
+      <a class="home" href="/">Yuxuan Zhao</a><span>·</span><a href="/#education">Education</a><span>·</span><a href="/#computational-methods">Computational Methods</a><span>·</span><a href="/#research">Research</a><span>·</span><a href="/#teaching">Teaching</a><span>·</span><a href="{CV_URL}" target="_blank" rel="noreferrer">CV</a>
+    </nav>
 
     <main class="notebook-shell">
-      <nav class="notebook-utility" aria-label="Notebook links">
-        <a href="/">← Back to website</a>
-        <span aria-hidden="true">·</span>
-        <a href="{source_url}" target="_blank" rel="noreferrer">View source ↗</a>
-      </nav>
-
       <header class="notebook-title-block">
-        <p class="notebook-repository">{repository}</p>
+        <p class="notebook-repository">{category}</p>
         <h1>{title}</h1>
         <p class="notebook-description">{description}</p>
-        <p class="notebook-meta">{kernel_label} notebook · Static rendering · Code was not re-executed</p>
+        <p class="notebook-meta">{language_label}</p>
+        <nav class="notebook-utility" aria-label="Notebook links">
+          <a href="/#computational-methods">← Computational methods</a>
+          <span aria-hidden="true">·</span>
+          <a href="{source_url}" target="_blank" rel="noreferrer">View source ↗</a>
+        </nav>
       </header>
 
       <article class="notebook-content" id="notebook-content">
@@ -241,7 +247,7 @@ def render_page(page: NotebookPage, body: str, inline_css: str, kernel: str) -> 
     </main>
 
     <footer class="notebook-footer">
-      <div><span>Yuxuan Zhao</span><a href="/notebooks/">Browse all notebooks →</a></div>
+      <div><span>Yuxuan Zhao · Minneapolis</span><a href="/#computational-methods">Computational methods ↑</a></div>
     </footer>
   </body>
 </html>
@@ -262,9 +268,10 @@ def main() -> int:
         remove_duplicate_title(notebook)
         body, inline_css = notebook_body(notebook)
         kernel = notebook.metadata.get("kernelspec", {}).get("display_name", "Julia")
+        language = kernel.split()[0] if kernel else "Julia"
         output = ROOT / page.output_path
         output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(render_page(page, body, inline_css, kernel), encoding="utf-8", newline="\n")
+        output.write_text(render_page(page, body, inline_css, language), encoding="utf-8", newline="\n")
     return 0
 
 

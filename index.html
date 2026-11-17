@@ -7,11 +7,11 @@
       name="description"
       content="Yuxuan Zhao is a Ph.D. student in Economics at the University of Minnesota studying imperfect information, macroeconomic business cycles, and heterogeneous-agent models."
     />
-    <meta name="theme-color" content="#f7f5ef" />
+    <meta name="theme-color" content="#fdfcf8" />
     <meta property="og:title" content="Yuxuan Zhao — Economics" />
     <meta
       property="og:description"
-      content="Ph.D. student in Economics researching information, expectations, policy, and the business cycle."
+      content="Ph.D. student in Economics at the University of Minnesota. Research on imperfect information and the business cycle, and notes on computational methods for macroeconomics."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.yuxuan-zhao.com/" />
@@ -19,197 +19,96 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <script>document.documentElement.classList.add('js');</script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
     <title>Yuxuan Zhao — Economics</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="col">
+      <nav class="topnav" aria-label="Sections">
+        <a href="#education">Education</a><span>·</span><a href="#computational-methods">Computational Methods</a><span>·</span><a href="#research">Research</a><span>·</span><a href="#teaching">Teaching</a><span>·</span><a href="https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
+      </nav>
 
-    <header class="site-header" data-header>
-      <div class="header-inner">
-        <a class="wordmark" href="#top">Yuxuan <span>/</span> Economics</a>
+      <header class="title" id="top">
+        <h1>Yuxuan Zhao</h1>
+        <p class="affil">Ph.D. Student in Economics, University of Minnesota</p>
+        <p class="affil-sub">
+          <a href="mailto:zhao2229@umn.edu">zhao2229@umn.edu</a> ·
+          <a href="https://github.com/YuxuanZhao-Econ" target="_blank" rel="noreferrer">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/yuxuan-zhao-010813362/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+      </header>
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Open navigation"
-          aria-expanded="false"
-          aria-controls="site-navigation"
-          data-menu-toggle
-        >
-          <span></span><span></span>
-        </button>
-
-        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
-          <a href="#github">GitHub</a>
-          <a href="https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
-          <a href="#research">Research</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main" class="page-shell">
-      <section class="intro reveal" id="top" aria-labelledby="intro-title">
-        <h1 id="intro-title">Yuxuan Zhao</h1>
-
-        <p class="intro-lede">
+      <div class="intro">
+        <p>
           I am a first-year Ph.D. student in Economics at the University of Minnesota.
           My research interests are in macroeconomics, behavioral economics, and macro-finance.
-          Broadly speaking, my research focuses on the role of imperfect information in
-          macroeconomic business cycles. I am also interested in heterogeneous-agent models
-          and the informational effects of public signals.
+          Broadly speaking, I study the role of imperfect information in macroeconomic business cycles.
+          I am also interested in heterogeneous-agent models and the informational effects of public signals.
         </p>
-
-        <div class="education-block">
-          <h2>Education</h2>
-          <p>Ph.D. in Economics, University of Minnesota, Twin Cities · 2025–Present</p>
-          <p>B.A. in Economics, Yuanpei College &amp; School of Economics, Peking University · 2021–2025</p>
-        </div>
-
-        <div class="intro-links">
-          <a href="mailto:zhao2229@umn.edu">zhao2229@umn.edu</a>
-          <span>·</span>
-          <a href="https://github.com/YuxuanZhao-Econ" target="_blank" rel="noreferrer">GitHub</a>
-          <span>·</span>
-          <a href="https://www.linkedin.com/in/yuxuan-zhao-010813362/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span>·</span>
-          <a href="https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
-        </div>
-      </section>
-
-      <section class="content-section" id="github" aria-labelledby="github-title">
-        <div class="section-heading reveal">
-          <div>
-            <h2 id="github-title">GitHub</h2>
-          </div>
-          <div class="section-heading-links">
-            <a href="/notebooks/">Browse notebooks →</a>
-            <a href="https://github.com/YuxuanZhao-Econ?tab=repositories" target="_blank" rel="noreferrer">View profile ↗</a>
-          </div>
-        </div>
-
-        <p class="section-intro reveal">
-          These are selected public repositories from my GitHub profile. They include code
-          and notebooks on computational macroeconomics, deep learning, and natural language processing.
-        </p>
-
-        <div class="compact-list repo-list">
-          <article class="compact-row reveal">
-            <div>
-              <h3><a href="https://github.com/YuxuanZhao-Econ/DeepLearningMacro" target="_blank" rel="noreferrer">DeepLearningMacro</a></h3>
-              <p>Deep learning foundations, natural language processing, and Euler-equation methods for stochastic RBC and heterogeneous-agent models.</p>
-              <div class="repo-keywords"><span>Julia</span><span>Deep learning</span><span>Computational macroeconomics</span></div>
-              <div class="repo-notebooks" aria-label="DeepLearningMacro notebooks">
-                <a href="/notebooks/deep-learning-macro/intro-to-deep-learning/">Intro to Deep Learning ↗</a>
-                <a href="/notebooks/deep-learning-macro/rbc-model/">RBC Model ↗</a>
-                <a href="/notebooks/deep-learning-macro/krusell-smith/">Krusell–Smith Model ↗</a>
-                <a href="/notebooks/deep-learning-macro/text-classification/">NLP: Text Classification ↗</a>
-                <a href="/notebooks/deep-learning-macro/neural-architectures/">NLP: Neural Architectures ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="compact-row reveal">
-            <div>
-              <h3><a href="https://github.com/YuxuanZhao-Econ/sequence_space_jacobian" target="_blank" rel="noreferrer">sequence_space_jacobian</a></h3>
-              <p>Sequence-space Jacobians, heterogeneous-agent transitions, and the fake news algorithm.</p>
-              <div class="repo-keywords"><span>Julia</span><span>Sequence-space Jacobian</span><span>Heterogeneous agents</span></div>
-              <div class="repo-notebooks" aria-label="Sequence-Space Jacobian notebooks">
-                <a href="/notebooks/sequence-space-jacobian/krusell-smith/">Krusell–Smith Model ↗</a>
-                <a href="/notebooks/sequence-space-jacobian/rbc-model/">RBC Model ↗</a>
-                <a href="/notebooks/sequence-space-jacobian/hank/">One-Asset HANK Model ↗</a>
-                <a href="/notebooks/sequence-space-jacobian/kmv-hank/">Two-Asset HANK Model ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="compact-row reveal">
-            <div>
-              <h3><a href="https://github.com/YuxuanZhao-Econ/KS1998" target="_blank" rel="noreferrer">KS1998</a></h3>
-              <p>A Julia implementation of the traditional Krusell–Smith (1998) solution algorithm.</p>
-              <div class="repo-keywords"><span>Julia</span><span>Krusell–Smith</span><span>Replication</span></div>
-              <div class="repo-notebooks" aria-label="KS1998 notebooks">
-                <a href="/notebooks/ks1998/solver/">Krusell–Smith Solver ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="compact-row reveal">
-            <div>
-              <h3><a href="https://github.com/YuxuanZhao-Econ/HANK" target="_blank" rel="noreferrer">HANK</a></h3>
-              <p>A one-asset heterogeneous-agent New Keynesian model with aggregate shocks and Krusell–Smith forecasting rules.</p>
-              <div class="repo-keywords"><span>Julia</span><span>HANK</span><span>Heterogeneous agents</span></div>
-              <div class="repo-notebooks" aria-label="HANK notebooks">
-                <a href="/notebooks/hank/">HANK Model ↗</a>
-                <a href="/notebooks/rank/">RANK Model ↗</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="research" aria-labelledby="research-title">
-        <div class="section-heading reveal">
-          <div>
-            <h2 id="research-title">Research</h2>
-          </div>
-        </div>
-        <h3 class="subsection-title reveal">Work in Progress</h3>
-        <article class="research-entry reveal">
-          <div>
-            <h3>Failures of Expectation Management: Learning from Counter-Cyclical Signaling Policy</h3>
-            <p>with <a href="https://liboecon.com/" target="_blank" rel="noreferrer">Bo Li ↗</a></p>
-          </div>
-        </article>
-      </section>
-
-      <section class="content-section" id="teaching" aria-labelledby="teaching-title">
-        <div class="section-heading reveal">
-          <div>
-            <h2 id="teaching-title">Teaching</h2>
-          </div>
-        </div>
-        <article class="teaching-entry reveal">
-          <div>
-            <h3>Principles of Economics (Macro)</h3>
-            <p>Teaching Assistant · Peking University, Department of Economics · 2025</p>
-          </div>
-          <p>
-            During my undergraduate studies, I led a weekly TA section for Principles of
-            Economics (Macro).
-          </p>
-          <a href="https://drive.google.com/file/d/1yesSLCgkfbIEgBVTTfVAhNlsTVZqwHcZ/view?usp=drive_link" target="_blank" rel="noreferrer">
-            View syllabus · Chinese version ↗
-          </a>
-        </article>
-      </section>
-
-      <section class="content-section contact" id="contact" aria-labelledby="contact-title">
-        <div class="section-heading reveal">
-          <div>
-            <h2 id="contact-title">Contact</h2>
-          </div>
-        </div>
-        <p class="reveal">
-          Questions, ideas, or research conversations are always welcome.<br />
-          <a href="mailto:zhao2229@umn.edu">zhao2229@umn.edu</a>
-        </p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p>© <span data-year></span> Yuxuan Zhao</p>
-        <a href="#top">Back to top ↑</a>
       </div>
-    </footer>
+
+      <main id="main">
+        <section id="education">
+          <h2><span class="num">1</span>Education</h2>
+          <table class="edu">
+            <tr><td class="yr">2025–</td><td>Ph.D. in Economics, University of Minnesota, Twin Cities</td></tr>
+            <tr><td class="yr">2021–2025</td><td>B.A. in Economics, Yuanpei College &amp; School of Economics, Peking University</td></tr>
+          </table>
+        </section>
+
+        <section id="computational-methods">
+          <h2><span class="num">2</span>Computational Methods</h2>
+          <p class="entry section-note"><span class="d">Notes on computational methods for macroeconomics, written in Julia. Each notebook works through a model, its solution method, and the results. The code is on <a href="https://github.com/YuxuanZhao-Econ" target="_blank" rel="noreferrer">GitHub</a>.</span></p>
+
+          <h3><span class="num">2.1</span>Deep learning for macroeconomics</h3>
+          <ol class="items">
+            <li><span class="n">(a)</span><span><a href="/notebooks/deep-learning-macro/intro-to-deep-learning/">Intro to Deep Learning</a><span class="d">Neural-network foundations and applications to macroeconomic models.</span></span></li>
+            <li><span class="n">(b)</span><span><a href="/notebooks/deep-learning-macro/rbc-model/">Deep Learning for an RBC Model</a><span class="d">An RBC model with the Euler-equation deep-learning method of Maliar et al. (2021).</span></span></li>
+            <li><span class="n">(c)</span><span><a href="/notebooks/deep-learning-macro/krusell-smith/">Deep Learning for the Krusell–Smith Model</a><span class="d">The Krusell–Smith (1998) model with the deep-learning method of Maliar et al. (2021).</span></span></li>
+            <li><span class="n">(d)</span><span><a href="/notebooks/deep-learning-macro/text-classification/">Intro to NLP</a><span class="d">Learning the basics of NLP through sentiment classification of IMDb movie reviews.</span></span></li>
+            <li><span class="n">(e)</span><span><a href="/notebooks/deep-learning-macro/neural-architectures/">Neural Architectures for NLP</a><span class="d">RNN, LSTM, Transformer, and fine-tuning a pretrained BERT model.</span></span></li>
+          </ol>
+
+          <h3><span class="num">2.2</span>Sequence-space Jacobians</h3>
+          <ol class="items">
+            <li><span class="n">(a)</span><span><a href="/notebooks/sequence-space-jacobian/rbc-model/">RBC Model with Sequence-Space Jacobians</a><span class="d">An introductory sequence-space Jacobian solver for the RBC model, built from scratch.</span></span></li>
+            <li><span class="n">(b)</span><span><a href="/notebooks/sequence-space-jacobian/krusell-smith/">Krusell–Smith Model with Sequence-Space Jacobians</a><span class="d">The Krusell–Smith (1998) model, with news shocks and the fake news algorithm.</span></span></li>
+            <li><span class="n">(c)</span><span><a href="/notebooks/sequence-space-jacobian/hank/">HANK Model with Sequence-Space Jacobians</a><span class="d">A one-asset HANK model with TFP and monetary-policy shocks.</span></span></li>
+            <li><span class="n">(d)</span><span><a href="/notebooks/sequence-space-jacobian/kmv-hank/">Two-Asset HANK Model with Sequence-Space Jacobians</a><span class="d">The two-asset HANK model of Kaplan, Moll, and Violante (2018).</span></span></li>
+          </ol>
+
+          <h3><span class="num">2.3</span>Krusell–Smith method</h3>
+          <ol class="items">
+            <li><span class="n">(a)</span><span><a href="/notebooks/ks1998/solver/">Krusell–Smith (1998) Solver</a><span class="d">The Krusell–Smith (1998) model with value function iteration.</span></span></li>
+            <li><span class="n">(b)</span><span><a href="/notebooks/rank/">Solving a RANK Model</a><span class="d">A representative-agent New Keynesian (RANK) model.</span></span></li>
+            <li><span class="n">(c)</span><span><a href="/notebooks/hank/">Solving a HANK Model</a><span class="d">A one-asset HANK model with aggregate TFP and monetary-policy shocks.</span></span></li>
+          </ol>
+        </section>
+
+        <section id="research">
+          <h2><span class="num">3</span>Research</h2>
+          <h3><span class="num">3.1</span>Work in progress</h3>
+          <p class="entry">
+            <span class="t accent">Failures of Expectation Management: Learning from Counter-Cyclical Signaling Policy</span>
+            <span class="note">(with <a href="https://liboecon.com/" target="_blank" rel="noreferrer">Bo Li</a>)</span>
+          </p>
+        </section>
+
+        <section id="teaching">
+          <h2><span class="num">4</span>Teaching</h2>
+          <p class="entry">
+            <span class="t">Principles of Economics (Macro)</span>, Teaching Assistant
+            <span class="d">Peking University, Department of Economics, 2025. Led a weekly TA section. <a href="https://drive.google.com/file/d/1yesSLCgkfbIEgBVTTfVAhNlsTVZqwHcZ/view?usp=drive_link" target="_blank" rel="noreferrer">Syllabus (Chinese)</a></span>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <span>Yuxuan Zhao · Minneapolis · 2026</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </div>
   </body>
 </html>
