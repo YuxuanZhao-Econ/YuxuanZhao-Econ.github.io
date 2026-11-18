@@ -8,7 +8,7 @@
   --code-bg: #f6f3ec;
   --serif: "EB Garamond", Garamond, "Times New Roman", serif;
   --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-  --col: min(760px, calc(100vw - 40px));
+  --col: min(1080px, calc(100vw - 40px));
   --tok-string: #4f6b3a;
   --tok-number: #8a4b08;
   --tok-comment: #8a8478;
