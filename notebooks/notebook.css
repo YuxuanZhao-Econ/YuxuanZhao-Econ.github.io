@@ -225,6 +225,19 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .notebook-content img,
 .notebook-content svg { display: block; max-width: 100%; height: auto; margin: 16px auto; }
 
+/* Long display equations scroll inside their own box instead of widening the
+   page; otherwise phones lay out the whole page at the equation's width. */
+.notebook-content mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}
+.notebook-content mjx-container { max-width: 100%; }
+.notebook-content .text_cell_render,
+.notebook-content .output_subarea,
+.notebook-content .jp-RenderedHTMLCommon { min-width: 0; max-width: 100%; }
+
 /* Tables in booktabs style */
 .notebook-content table {
   width: auto;
@@ -238,7 +251,15 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .notebook-content thead tr { border-bottom: 0.5px solid var(--rule); }
 .notebook-content th,
-.notebook-content td { padding: 5px 14px; border: 0; text-align: right; }
+.notebook-content td {
+  padding: 5px 14px;
+  border: 0;
+  text-align: right;
+  /* Break only between words inside tables; "anywhere" on the page would
+     otherwise squeeze narrow columns to one letter per line on phones. */
+  overflow-wrap: normal;
+  word-break: normal;
+}
 .notebook-content th { font-weight: 500; background: none; }
 .notebook-content th:first-child,
 .notebook-content td:first-child,
@@ -306,6 +327,17 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .notebook-content .jp-InputArea,
   .notebook-content .input_area { padding: 12px; }
   .notebook-content pre { font-size: 12.5px; }
+  .notebook-content table {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    font-size: 15px;
+  }
+  .notebook-content th,
+  .notebook-content td { min-width: 8em; padding: 5px 10px; }
+  .notebook-content th:first-child,
+  .notebook-content td:first-child { padding-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
