@@ -7,6 +7,14 @@
     <meta name="theme-color" content="#fdfcf8" />
     <link rel="canonical" href="https://www.yuxuan-zhao.com/notebooks/ks1998/solver/" />
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -94,7 +102,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <title>Krusell–Smith (1998) Solver — Yuxuan Zhao</title>
   </head>
   <body class="notebook-page">
-    <a class="skip-link" href="#notebook-content">Skip to notebook</a>
+    <button type="button" class="theme-switch" role="switch" aria-checked="false" aria-label="Dark mode" data-theme-toggle>
+      <span class="theme-switch-knob" aria-hidden="true">
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </span>
+    </button>
+        <a class="skip-link" href="#notebook-content">Skip to notebook</a>
     <nav class="topnav" aria-label="Site">
       <a class="home" href="/">Yuxuan Zhao</a><span>·</span><a href="/#education">Education</a><span>·</span><a href="/#computational-methods">Computational Methods</a><span>·</span><a href="/#research">Research</a><span>·</span><a href="/#teaching">Teaching</a><span>·</span><a href="https://drive.google.com/file/d/1hKJYm6inek4VeRyEN-rtgEuaotzOOa-E/view?usp=sharing" target="_blank" rel="noreferrer">CV</a>
     </nav>
@@ -1905,5 +1919,25 @@ Good-state law: log(K') = 0.0913 + 0.9639*log(K)
     <footer class="notebook-footer">
       <div><span>Yuxuan Zhao · Minneapolis</span><a href="/#computational-methods">Computational methods ↑</a></div>
     </footer>
+  
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+        var button = document.querySelector('[data-theme-toggle]');
+        function current() { return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light'); }
+        function label() {
+          button.setAttribute('aria-checked', String(current() === 'dark'));
+        }
+        button.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          label();
+        });
+        media.addEventListener('change', label);
+        label();
+      })();
+    </script>
   </body>
 </html>
